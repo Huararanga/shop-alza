@@ -1,0 +1,73 @@
+@import "@/styles/colors";
+@import "@/styles/variables";
+
+$productItemWidth: 200px;
+
+.item {
+    width: $productItemWidth;
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: left;
+    border-collapse: collapse;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &Grid {
+
+        @media (max-width: $narrowDisplay) {
+            width: 100%;
+            flex-direction: row;
+            margin: $spacing 0 $spacing 0;
+        }
+    }
+
+    &Carousel {
+        margin: 1rem;
+    }
+}
+
+.title {
+    min-height: 3rem;
+
+    &Carousel {
+        flex: auto;
+    }
+}
+
+.text {
+    max-height: 4.4rem;
+    font-size: 0.8rem;
+    overflow: hidden;
+    color: $darkGrey;
+}
+
+.imageContainer {
+    padding: $spacing 0 $spacing 0;
+    position: relative;
+}
+
+.ratingStars {
+    position: absolute;
+    bottom: $spacing;
+    left: 2 * $spacing;
+}
+
+.bottomRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.priceWithVat {
+    font-size: 1.2rem;
+    color: $green;
+}
+
+.stock {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: $spacing 0 $spacing 0;
+    font-weight: 800;
+}

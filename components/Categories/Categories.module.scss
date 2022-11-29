@@ -1,0 +1,37 @@
+@import "@/styles/colors";
+@import "@/styles/variables";
+
+$itemWidth: 128px;
+
+.categories {
+    width: 100%;
+}
+
+.title {
+    color: $blue;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,$itemWidth);
+    gap: 0.5rem;
+
+    @media (max-width: $narrowDisplay) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.item {
+    height: 2rem;
+    padding: 0 $spacing 0 $spacing;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: $grey;
+
+    span {
+        overflow: hidden;
+    }
+}

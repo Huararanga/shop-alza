@@ -1,0 +1,50 @@
+@import "@/styles/colors";
+@import "@/styles/variables";
+
+.wrapper {
+    width: 100%;
+    position: relative; // kvuli sipkam
+}
+
+.carousel {
+    overflow-x: auto;
+}
+
+.carouselInner {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.before,
+.after {
+    flex-shrink: 0;
+}
+
+.itemWrapper {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.arrow {
+    position: absolute;
+    width: 2 * $spacing;
+    height: 4rem;
+    top: calc(50% - 2rem);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $blue;
+    border-radius: 6px;
+
+    &Left {
+        left: -1.6rem;
+    }
+
+    &Right {
+        right: -1.6rem;
+    }
+}

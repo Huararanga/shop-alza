@@ -1,0 +1,15 @@
+@import "@/styles/colors";
+@import "@/styles/variables";
+
+@import "../ProductItem/ProductItem.module.scss";
+
+.productList {
+    width: 100%;
+    flex-direction: row;
+
+    @media (min-width: $narrowDisplay) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,$productItemWidth);
+        gap: 3rem;
+    }
+}
